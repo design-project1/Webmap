@@ -34,6 +34,14 @@
             z-index: 100;
         }
 
+        #cover {
+            width: inherit;
+            height: inherit;
+            float: left;
+            position: absolute;
+            z-index: 500;
+        }
+
         #topGlass {
             width: inherit;
             height: inherit;
@@ -129,6 +137,11 @@
                 $('.marker').removeClass('overFog_marker');
                 $('.marker').removeClass('shakee')
             })
+
+            // SET : CLICK COVER
+            $('#cover').click(function () {
+                $('#cover').hide()
+            })
         });
 
         let placeMarker = function () {
@@ -217,6 +230,8 @@
 <body>
     <div id="masterPane">
         <div id="mapArea">
+            <img id="cover"
+                src="https://github.com/design-project1/dreammap/blob/main/assets/cover/coverimage.png?raw=true"></img>
             <div id="mapFog"></div>
             <div id="topGlass"></div>
             <img class="marker" id="1"><img class="bubble" id="b1">
